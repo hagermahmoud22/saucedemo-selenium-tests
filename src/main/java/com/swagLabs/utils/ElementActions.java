@@ -25,4 +25,14 @@ public class ElementActions {
         Scroll.scrollToElement(driver, locator);
         driver.findElement(locator).click();
     }
+
+    // get text
+    public static String getText(WebDriver driver, By locator){
+
+        //wait - scroll - find - get
+
+        Waits.waitForElementVisible(driver, locator);
+        Scroll.scrollToElement(driver, locator);
+        return driver.findElement(locator).getText();
+    }
 }
